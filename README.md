@@ -19,8 +19,14 @@ The program swaps the values of two variables `a` and `b` without using a third 
 ## Compilation and Execution
 
 You can use the `gcc` compiler to compile and run this program. Here's how you can do it:
-
-1. Save the program in a file, say `swap.c`.
-2. Open a terminal in the directory containing `swap.c`.
-3. Run `gcc -o swap swap.c` to compile the program. This will create an executable named `swap`.
-4. Run `./swap` to execute the program.
+Preprocessing: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the -E option:
+gcc -E swap.c -o swap.i
+This will generate the preprocessed code swap.i.
+Compilation: This stage translates the preprocessed code into assembly code. You can run the compiler with the -S option:
+gcc -S swap.i -o swap.s
+This will generate the assembly code swap.s.
+Assembly: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the -c option:
+gcc -c swap.s -o swap.o
+This will generate the object file swap.o.
+Linking: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using gcc without any options:
+gcc swap.o -o swap
