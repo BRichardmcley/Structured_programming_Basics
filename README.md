@@ -384,3 +384,16 @@ if none of the above matches, it will return that the character entered is a spe
 HOW TO COMPILE AND RUN THE CODE
 •	Compile the code using “gcc character.c -o try1”
 •	Run the code using “./try1”
+Minimum Fixed Monthly Payment 
+This C program calculates the minimum fixed monthly payment needed to pay off a loan within one year, considering an annual interest rate. It uses an iterative approach to find the optimal payment amount.
+CODE EXPLANATION
+float monthlyUnpaidBalance = balance;: Initializes the monthly unpaid balance to the initial loan balance.
+while (monthlyUnpaidBalance > 0) {: Begins a loop that continues as long as the loan is not completely pay off
+minimumFixedMonthlyPayment += 10;: Increases the minimum fixed monthly payment by 10 units in each iteration.
+while (month <= 12 && monthlyUnpaidBalance > 0) {: Begins an inner loop that runs for a maximum of 12 months or until the loan is fully paid off.
+monthlyUnpaidBalance -= minimumFixedMonthlyPayment;: Subtracts the minimum fixed monthly payment from the monthly unpaid balance.
+monthlyUnpaidBalance += monthlyInterestRate * monthlyUnpaidBalance;: Adds the interest accrued during the month to the unpaid balance.
+calculate_minimum_fixed_monthly_payment function with the provided loan balance and interest rate.
+HOW TO COMPILE AND RUN THE CODE
+•	Compile the code using “gcc payment.c -o try3”
+•	Run the code using “./try3”
