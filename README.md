@@ -1,9 +1,24 @@
-**Structured Programming - The C Programming Language
-Lecturer: Mr Tekoh Palma
-Kelden – Software Engineering Level 1**
-Problem set 1
-SECTION A: This section have been divided into three whereby each member of the group is to work and submit to the group first for formal explanation then the group does all possible correctios before the member is permited 
-to commit on github.
+# <p style='color:blue' align="center"><b>Structured Programming - The C Programming Language<br>Lecturer: Mr Tekoh Palma<br>Kelden – Software Engineering Level 1<br>Problem set 1</b></p><br>
+# Swapping Two Numbers in C Without Using a Third Variable
+
+This repository contains a simple C program that swaps the values of two variables without using a third variable.
+
+ Explanation
+
+The program swaps the values of two variables `a` and `b` without using a third variable. The swapping process involves three steps:
+
+1. The sum of `a` and `b` is stored in `a`.
+2. Now `a` is the sum of `a` and `b`, so subtracting `b` gives the original `a`, which is assigned to `b`.
+3. At this point, `b` has the original `a`'s value, so subtracting `b` from `a` (which is the sum of `a` and `b`) gives the original `b`, which is assigned to `a`.
+
+## Compilation and Execution
+
+You can use the `gcc` compiler to compile and run this program. Here's how you can do it:
+
+1. Save the program in a file, say `swap.c`.
+2. Open a terminal in the directory containing `swap.c`.
+3. Run `gcc -o swap swap.c` to compile the program. This will create an executable named `swap`.
+4. Run `./swap` to execute the program.
 # Swapping Two Numbers in C Without Using a Third Variable
 
 This repository contains a simple C program that swaps the values of two variables without using a third variable.
@@ -19,14 +34,259 @@ The program swaps the values of two variables `a` and `b` without using a third 
 ## Compilation and Execution
 
 You can use the `gcc` compiler to compile and run this program. Here's how you can do it:
-Preprocessing: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the -E option:
-gcc -E swap.c -o swap.i
-This will generate the preprocessed code swap.i.
-Compilation: This stage translates the preprocessed code into assembly code. You can run the compiler with the -S option:
-gcc -S swap.i -o swap.s
-This will generate the assembly code swap.s.
-Assembly: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the -c option:
-gcc -c swap.s -o swap.o
-This will generate the object file swap.o.
-Linking: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using gcc without any options:
-gcc swap.o -o swap
+
+1. Save the program in a file, say `swap.c`.
+2. Open a terminal in the directory containing `swap.c`.
+3. Run `gcc -o swap swap.c` to compile the program. This will create an executable named `swap`.
+4. Run `./swap` to execute the program.
+
+# Calculating the Remainder Without Using the % Operator in C
+
+This repository contains a simple C program that calculates the remainder of two numbers without using the `%` operator.
+
+## Explanation
+
+The program calculates the remainder of two numbers `dividend` and `divisor` without using the `%` operator. The process involves two steps:
+
+1. The quotient of `dividend` and `divisor` is calculated.
+2. The remainder is calculated by subtracting the product of the `quotient` and `divisor` from the `dividend`.
+
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+    gcc -E remainder.c -o remainder.i
+    ```
+    This will generate the preprocessed code `remainder.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S remainder.i -o remainder.s
+    ```
+    This will generate the assembly code `remainder.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c remainder.s -o remainder.o
+    ```
+    This will generate the object file `remainder.o`.
+
+4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc remainder.o -o remainder
+    ```
+    This will generate the executable file `remainder`.
+
+You can then run the executable with `./remainder`.
+
+Please note that you can perform all these stages at once by running `gcc -o remainder remainder.c`. The `-o` option is used to specify the output file name.
+
+# Calculating the Sum of Digits of a Three-Digit Number in C
+
+This repository contains a simple C program that calculates the sum of digits of a three-digit number.
+
+## Explanation
+
+The program calculates the sum of digits of a three-digit number. The process involves three steps:
+
+1. The last digit of the number is obtained by performing the operation `number % 10`.
+2. The obtained digit is added to the sum.
+3. The number is reduced by removing the last digit using the operation `number = number / 10`.
+
+This process is repeated until the number is reduced to 0.
+
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+    gcc -E sum_of_digits.c -o sum_of_digits.i
+    ```
+    This will generate the preprocessed code `sum_of_digits.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S sum_of_digits.i -o sum_of_digits.s
+    ```
+    This will generate the assembly code `sum_of_digits.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c sum_of_digits.s -o sum_of_digits.o
+    ```
+    This will generate the object file `sum_of_digits.o`.
+
+4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc sum_of_digits.o -o sum_of_digits
+    ```
+    This will generate the executable file `sum_of_digits`.
+
+You can then run the executable with `./sum_of_digits`.
+
+Please note that you can perform all these stages at once by running `gcc -o sum_of_digits sum_of_digits.c`. The `-o` option is used to specify the output file name.
+
+Printing the Reverse of a Three-Digit Number in C
+
+This repository contains a simple C program that prints the reverse of a three-digit number.
+
+## Explanation
+
+The program prints the reverse of a three-digit number. The process involves three steps:
+
+1. The last digit of the number is obtained by performing the operation `number % 10`.
+2. The obtained digit is printed.
+3. The number is reduced by removing the last digit using the operation `number = number / 10`.
+
+This process is repeated until the number is reduced to 0.
+
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+    gcc -E reverse_number.c -o reverse_number.i
+    ```
+    This will generate the preprocessed code `reverse_number.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S reverse_number.i -o reverse_number.s
+    ```
+    This will generate the assembly code `reverse_number.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c reverse_number.s -o reverse_number.o
+    ```
+    This will generate the object file `reverse_number.o`.
+
+4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc reverse_number.o -o reverse_number
+    ```
+    This will generate the executable file `reverse_number`.
+
+You can then run the executable with `./reverse_number`.
+
+Please note that you can perform all these stages at once by running `gcc -o reverse_number reverse_number.c`. The `-o` option is used to specify the output file name.
+
+
+Calculating Credit Card Balance After One Year in C
+
+# This repository contains a simple C program that calculates the credit card balance after one year if a person only pays the minimum monthly payment required by the credit card company each month.
+
+## Explanation
+
+The program calculates the credit card balance after one year. The process involves the following steps for each month:
+
+1. Calculate the monthly interest rate as the annual interest rate divided by 12.0.
+2. Calculate the minimum monthly payment as the minimum monthly payment rate multiplied by the previous balance.
+3. Calculate the monthly unpaid balance as the previous balance minus the minimum monthly payment.
+4. Update the balance each month as the monthly unpaid balance plus the product of the monthly interest rate and the monthly unpaid balance.
+
+The program prints the minimum monthly payment and the remaining balance for each month with no more than two decimal digits of accuracy. At the end of the year, the program prints the total amount paid that year and the remaining balance.
+
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+    gcc -E credit_card_balance.c -o credit_card_balance.i
+    ```
+    This will generate the preprocessed code `credit_card_balance.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S credit_card_balance.i -o credit_card_balance.s
+    ```
+    This will generate the assembly code `credit_card_balance.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c credit_card_balance.s -o credit_card_balance.o
+    ```
+    This will generate the object file `credit_card_balance.o`.
+
+4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc credit_card_balance.o -o credit_card_balance
+    ```
+    This will generate the executable file `credit_card_balance`.
+
+You can then run the executable with `./credit_card_balance`.
+
+Please note that you can perform all these stages at once by running `gcc -o credit_card_balance credit_card_balance.c`. The `-o` option is used to specify the output file name.
+
+Calculating Minimum Fixed Monthly Payment to Pay Off Credit Card Debt in a Year in C
+
+This repository contains a simple C program that calculates the minimum fixed monthly payment needed to pay off a credit card balance within 12 months. The monthly payment is a constant amount that will be paid each month and is a multiple of 10FCFA.
+
+## Explanation
+
+
+ # The program calculates the minimum fixed monthly payment needed to pay off a credit card balance within 12 months. The process involves the following steps for each month until the balance is less than or equal to zero:
+
+1. Calculate the monthly interest rate as the annual interest rate divided by 12.0.
+2. Calculate the monthly unpaid balance as the previous balance minus the minimum fixed monthly payment.
+3. Update the balance each month as the monthly unpaid balance plus the product of the monthly interest rate and the monthly unpaid balance.
+
+The program prints the lowest monthly payment that will pay off all debt in under 1 year.
+
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+    gcc -E credit_card_debt.c -o credit_card_debt.i
+    ```
+    This will generate the preprocessed code `credit_card_debt.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S credit_card_debt.i -o credit_card_debt.s
+    ```
+    This will generate the assembly code `credit_card_debt.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c credit_card_debt.s -o credit_card_debt.o
+    ```
+    This will generate the object file `credit_card_debt.o`.
+
+4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc credit_card_debt.o -o credit_card_debt
+    ```
+    This will generate the executable file `credit_card_debt`.
+
+You can then run the executable with `./credit_card_debt`.
+
+Please note that you can perform all these stages at once by running `gcc -o credit_card_debt credit_card_debt.c`. The `-o` option is used to specify the output file name.
+
