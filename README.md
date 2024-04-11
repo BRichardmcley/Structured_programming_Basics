@@ -289,4 +289,98 @@ You can manually go through each of the four stages of the compilation process u
 You can then run the executable with `./credit_card_debt`.
 
 Please note that you can perform all these stages at once by running `gcc -o credit_card_debt credit_card_debt.c`. The `-o` option is used to specify the output file name.
+#Telling Whether A Number Is Magic or Not
 
+DESCRIPTION
+
+This C program tells the user whether the number he/she entered is a magic number or not.
+
+CODE EXPLANATION
+
+The lines 
+Int sumofdigits (int num) {
+        If (num==0)
+        {
+                return 0;
+        } else {
+                return (num%10) + sumofdigits (num/10);
+        }
+}
+•	This function, sumofdigits, calculates the sum of the digits of an integer.
+•	It uses recursion to break down the number into individual digits and adds them up.
+•	If the input num is zero, it returns zero (base case).
+•	Otherwise, it computes the last digit using num % 10 and recursively calls itself with the remaining digits (num / 10).
+The lines 
+int reverse(int num)
+{
+        Int reversed=0;
+        While (num! =0) {
+                Int digit= num%10;
+                reversed=reversed*10+digit;
+                num/=10;
+        }
+        return reversed;
+}
+•	The reverse function reverses the digits of an integer.
+•	It uses a while loop to extract each digit from the input number and build the reversed number.
+•	The variable reversed accumulates the reversed digits.
+•	The loop continues until num becomes zero.
+The lines 
+Int is_magic_number (int n) {
+        Int sum= sumofdigits (n);
+        Int reversed= reverse (sum);
+        return (sum*reversed==n);
+}
+•	The is_magic_number function checks if a given number is a “magic number.”
+•	It calculates the sum of digits using sumofdigits of the input number n and the sum variable holds it value
+•	It calculates the reverse using the reversed sum and stores it value in the variable reverse.
+•	The line “(sum*reversed==n);” evaluate if sum multiply by reversed is equal to n( which is original number input) if yes then the number is a magic number, if no then it is not a magic number.
+HOW TO COMPILE AND RUN THE CODE
+•	To compile the code use gcc magic_number.c  -o try2
+•	To run the code use ./try2
+
+returns the value of x raised to the power of y.
+DESCRIPTION
+This C program calculate the result when you raised integer to a base.
+CODE EXPLANATION
+The function “int _pow_recursion (int x, int y)” calculate the power of x raise to the y exponent
+•	If  y is 0, it will return 1 since anything raise to the power 0 is 1
+•	If y is negative, it will return -1 indicating an error
+The line “return x* _pow_recursion(x, y-1);” 
+Will return the value when x is multiply by _pow_recursion(x, y-1) that is
+•	_pow_recursion(x, y-1) calculate the value of x raise to the power of y-1
+•	The result of this calculation is multiplied by x
+•	This process continues until y reaches 0 because anything raise to the 0 is 1
+EXAMPLE: let calculate 2 raise to 3,
+“Return x* _pow_recursion(x, y-1);” will function this way
+•	_pow_recursion(2, 3)
+Recursively call y-1 which will result to 
+•	_pow_recursion(2, 2(3-1)) this line calculate 2 raise to the 2 which gives 4
+•	_pow_recursion(2, 1(2-1)) this line calculate 2 raise to the 1 which is 2
+•	_pow_recursion(2, 0(1-1)) this line calculate 2 raise to 0 which is 1 
+At the end it will multiply 4*2*1 which is 8
+Therefore 2 raise to the 3 is 8
+The line “int answer = _pow_recursion (base, exponent);”
+Calls the _pow_recursion function to compute the result 
+The line “if (answer== -1)” says that if the answer is -1 then it should return error problem with your input else it will give you a value.
+HOW TO COMPILE AND RUN THE PROGRAM
+•	Compile the program using gcc power.c –o try
+•	And run using ./try
+Determine which type of character is entered
+DESCRIPTION
+This C program determines the type of character you enter. It classifies your entry according to 
+•	Capital letter
+•	Small letter
+•	Digits
+•	Special character
+CODE EXPLANATION
+•	The line “char character;”
+ Declare a character variable called “character”.This variable will store the user’s input character
+•	The line “case 'a'...'z'” Checks if ch is a lowercase letter (between ‘a’ and ‘z’). If true, it executes the following line.
+•	printf("%c is a small letter\n",ch); which prints a message indicating that the input character is a small letter.
+•	 The line “case 'A'...'Z'” this checks if ch is an uppercase letter (between ‘A’ and ‘Z’).
+•	The line “case '0'...'9'” Checks if ch is a digit (between ‘0’ and ‘9’).
+if none of the above matches, it will return that the character entered is a special character
+HOW TO COMPILE AND RUN THE CODE
+•	Compile the code using “gcc character.c -o try1”
+•	Run the code using “./try1”
