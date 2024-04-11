@@ -289,111 +289,82 @@ You can manually go through each of the four stages of the compilation process u
 You can then run the executable with `./credit_card_debt`.
 
 Please note that you can perform all these stages at once by running `gcc -o credit_card_debt credit_card_debt.c`. The `-o` option is used to specify the output file name.
-#Telling Whether A Number Is Magic or Not
+# Telling whether or not a number is magic or not
 
-DESCRIPTION
+This C program checks whether a given number is a magic number.
 
-This C program tells the user whether the number he/she entered is a magic number or not.
+# Explanation
 
-CODE EXPLANATION
+ The user provides an integer.
+ The program calculates the sum of the digits of the input number.
+ Next, it computes the reverse of the sum of digits.
+ If the product of the sum of digits and its reverse equals the original input number, it’s considered a magic number.
 
-The lines 
-Int sumofdigits (int num) {
-        If (num==0)
-        {
-                return 0;
-        } else {
-                return (num%10) + sumofdigits (num/10);
-        }
-}
-•	This function, sumofdigits, calculates the sum of the digits of an integer.
-•	It uses recursion to break down the number into individual digits and adds them up.
-•	If the input num is zero, it returns zero (base case).
-•	Otherwise, it computes the last digit using num % 10 and recursively calls itself with the remaining digits (num / 10).
-The lines 
-int reverse(int num)
-{
-        Int reversed=0;
-        While (num! =0) {
-                Int digit= num%10;
-                reversed=reversed*10+digit;
-                num/=10;
-        }
-        return reversed;
-}
-•	The reverse function reverses the digits of an integer.
-•	It uses a while loop to extract each digit from the input number and build the reversed number.
-•	The variable reversed accumulates the reversed digits.
-•	The loop continues until num becomes zero.
-The lines 
-Int is_magic_number (int n) {
-        Int sum= sumofdigits (n);
-        Int reversed= reverse (sum);
-        return (sum*reversed==n);
-}
-•	The is_magic_number function checks if a given number is a “magic number.”
-•	It calculates the sum of digits using sumofdigits of the input number n and the sum variable holds it value
-•	It calculates the reverse using the reversed sum and stores it value in the variable reverse.
-•	The line “(sum*reversed==n);” evaluate if sum multiply by reversed is equal to n( which is original number input) if yes then the number is a magic number, if no then it is not a magic number.
-HOW TO COMPILE AND RUN THE CODE
-•	To compile the code use gcc magic_number.c  -o try2
-•	To run the code use ./try2
+# Compilation and execution
 
-returns the value of x raised to the power of y.
-DESCRIPTION
-This C program calculate the result when you raised integer to a base.
-CODE EXPLANATION
-The function “int _pow_recursion (int x, int y)” calculate the power of x raise to the y exponent
-•	If  y is 0, it will return 1 since anything raise to the power 0 is 1
-•	If y is negative, it will return -1 indicating an error
-The line “return x* _pow_recursion(x, y-1);” 
-Will return the value when x is multiply by _pow_recursion(x, y-1) that is
-•	_pow_recursion(x, y-1) calculate the value of x raise to the power of y-1
-•	The result of this calculation is multiplied by x
-•	This process continues until y reaches 0 because anything raise to the 0 is 1
-EXAMPLE: let calculate 2 raise to 3,
-“Return x* _pow_recursion(x, y-1);” will function this way
-•	_pow_recursion(2, 3)
-Recursively call y-1 which will result to 
-•	_pow_recursion(2, 2(3-1)) this line calculate 2 raise to the 2 which gives 4
-•	_pow_recursion(2, 1(2-1)) this line calculate 2 raise to the 1 which is 2
-•	_pow_recursion(2, 0(1-1)) this line calculate 2 raise to 0 which is 1 
-At the end it will multiply 4*2*1 which is 8
-Therefore 2 raise to the 3 is 8
-The line “int answer = _pow_recursion (base, exponent);”
-Calls the _pow_recursion function to compute the result 
-The line “if (answer== -1)” says that if the answer is -1 then it should return error problem with your input else it will give you a value.
-HOW TO COMPILE AND RUN THE PROGRAM
-•	Compile the program using gcc power.c –o try
-•	And run using ./try
-Determine which type of character is entered
-DESCRIPTION
-This C program determines the type of character you enter. It classifies your entry according to 
-•	Capital letter
-•	Small letter
-•	Digits
-•	Special character
-CODE EXPLANATION
-•	The line “char character;”
- Declare a character variable called “character”.This variable will store the user’s input character
-•	The line “case 'a'...'z'” Checks if ch is a lowercase letter (between ‘a’ and ‘z’). If true, it executes the following line.
-•	printf("%c is a small letter\n",ch); which prints a message indicating that the input character is a small letter.
-•	 The line “case 'A'...'Z'” this checks if ch is an uppercase letter (between ‘A’ and ‘Z’).
-•	The line “case '0'...'9'” Checks if ch is a digit (between ‘0’ and ‘9’).
-if none of the above matches, it will return that the character entered is a special character
-HOW TO COMPILE AND RUN THE CODE
-•	Compile the code using “gcc character.c -o try1”
-•	Run the code using “./try1”
-Minimum Fixed Monthly Payment 
-This C program calculates the minimum fixed monthly payment needed to pay off a loan within one year, considering an annual interest rate. It uses an iterative approach to find the optimal payment amount.
-CODE EXPLANATION
-float monthlyUnpaidBalance = balance;: Initializes the monthly unpaid balance to the initial loan balance.
-while (monthlyUnpaidBalance > 0) {: Begins a loop that continues as long as the loan is not completely pay off
-minimumFixedMonthlyPayment += 10;: Increases the minimum fixed monthly payment by 10 units in each iteration.
-while (month <= 12 && monthlyUnpaidBalance > 0) {: Begins an inner loop that runs for a maximum of 12 months or until the loan is fully paid off.
-monthlyUnpaidBalance -= minimumFixedMonthlyPayment;: Subtracts the minimum fixed monthly payment from the monthly unpaid balance.
-monthlyUnpaidBalance += monthlyInterestRate * monthlyUnpaidBalance;: Adds the interest accrued during the month to the unpaid balance.
-calculate_minimum_fixed_monthly_payment function with the provided loan balance and interest rate.
-HOW TO COMPILE AND RUN THE CODE
-•	Compile the code using “gcc payment.c -o try3”
-•	Run the code using “./try3”
+To compile and run this program:
+
+Save the program in a file, magic_number.c.
+Open a terminal in the directory containing magic_number.c.
+Compile using gcc -o magic_number.c try2.
+Execute the program with ./try2.
+
+# Power Calculation Using Recursion in C
+This C program computes the power of a given base raised to a specified exponent using recursion. The program follows these steps:
+
+# Explanation
+ The user provides the base and exponent.
+ The power function recursively calculates the result by multiplying the base with the result of power(base, exponent - 1).
+ If the exponent is zero, the function returns 1 (since any number raised to the power of 0 is 1).
+
+# Compilation and Execution
+To compile and run this program:
+
+Save the program in a file, power.c.
+Open a terminal in the directory containing power.c.
+Compile using gcc -o power.c try.
+Execute the program with ./try.
+
+# Character Type Identifier in C
+This C program takes a character as input and identifies its type. 
+
+# Explanation
+
+ The user provides a character.
+Switch Statement: The program uses a switch statement to categorize the character based on its type:
+If the character is between ‘a’ and ‘z’, it’s considered a small letter.
+If the character is between ‘A’ and ‘Z’, it’s considered a capital letter.
+If the character is between ‘0’ and ‘9’, it’s considered a digit.
+Otherwise, it’s categorized as a special character.
+The program prints the type of the character.
+
+# Compilation and Execution
+To compile and run this program:
+
+Save the program in a file,character.c.
+Open a terminal in the directory containing character.c.
+Compile using gcc character.c -o try1.
+Execute the program with ./try1.
+
+# Minimum Fixed Monthly Payment Calculator in C
+This C program computes the minimum fixed monthly payment required to pay off a credit card balance within a year.
+
+# Explanation
+
+The user provides the initial balance (credit card balance) and the annual interest rate (expressed as a decimal).
+The program calculates the monthly interest rate by dividing the annual interest rate by 12.
+It starts with an initial guess of $10 and iteratively increases the payment until the balance is paid off within a year.
+The outer loop increments the minimum fixed monthly payment by $10 in each iteration.
+The inner loop simulates 12 months of payments:
+Deducts the monthly payment from the balance.
+Adds the monthly interest on the remaining balance.
+The process continues until the balance is paid off (monthlyUnpaidBalance becomes zero).
+The program prints the lowest payment needed to pay off the loan.
+
+# Compilation and Execution
+To compile and run this program:
+
+Save the program in a file, payment.c.
+Open a terminal in the directory containing payment.c.
+Compile using gcc payment.c -o try3.
+Execute the program with ./try3.
