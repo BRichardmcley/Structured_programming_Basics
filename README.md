@@ -1,5 +1,13 @@
 # <p style='color:blue' align="center"><b>Structured Programming - The C Programming Language<br>Lecturer: Mr Tekoh Palma<br>Kelden – Software Engineering Level 1<br>Problem set 1</b></p>
 <p align="center"><img src="https://github.com/BRichardmcley/Structured_programming_Basics/blob/main/Kelden%20CampusAL123%2020240412_103508.jpg" width=20% height=20% align="center"></p>
+<div align="center">
+	<br>
+	<a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
+		<img src="header.svg" width="800" height="400" alt="By Bonekeh Richard<br> Azangue Ange<br> Rita">
+	</a>
+	<br>
+</div>
+
 <hr>
 
 # Swapping Two Numbers in C Without Using a Third Variable
