@@ -1,4 +1,5 @@
 # <p style='color:blue' align="center"><b>Structured Programming - The C Programming Language<br>Lecturer: Mr Tekoh Palma<br>Kelden – Software Engineering Level 1<br>Problem set 1</b></p><br>
+![](Structured_programming_Basics/Kelden CampusAL123 20240412_103508.jpg|width="100" height="100" align="center")
 # Swapping Two Numbers in C Without Using a Third Variable
 
 This repository contains a simple C program that swaps the values of two variables without using a third variable.
