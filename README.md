@@ -1,13 +1,11 @@
-# <p style='color:blue' align="center"><b>Structured Programming - The C Programming Language<br>Lecturer: Mr Tekoh Palma<br>Kelden – Software Engineering Level 1<br>Problem set 1</b></p><br>
-![](Structured_programming_Basics/Kelden CampusAL123 20240412_103508.jpg|width="100" height="100" align="center")
+# <p style='color:blue' align="center"><b>Structured Programming - The C Programming Language<br>Lecturer: Mr Tekoh Palma<br>Kelden – Software Engineering Level 1<br>Problem set 1</b></p>
+<p align="center"><img src="https://github.com/BRichardmcley/Structured_programming_Basics/blob/main/Kelden%20CampusAL123%2020240412_103508.jpg" width=20% height=20% align="center"></p>
+<hr>
+
 # Swapping Two Numbers in C Without Using a Third Variable
-
 This repository contains a simple C program that swaps the values of two variables without using a third variable.
-
- Explanation
-
+ ## Explanation
 The program swaps the values of two variables `a` and `b` without using a third variable. The swapping process involves three steps:
-
 1. The sum of `a` and `b` is stored in `a`.
 2. Now `a` is the sum of `a` and `b`, so subtracting `b` gives the original `a`, which is assigned to `b`.
 3. At this point, `b` has the original `a`'s value, so subtracting `b` from `a` (which is the sum of `a` and `b`) gives the original `b`, which is assigned to `a`.
