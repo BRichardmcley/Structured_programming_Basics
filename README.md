@@ -501,3 +501,60 @@ Save the program in a file, payment.c.
 Open a terminal in the directory containing payment.c.
 Compile using gcc payment.c -o try3.
 Execute the program with ./try3.
+
+
+
+# Binary Search in C
+
+This program performs a binary search on an array of integers. The array is filled with random values and the number to search for is provided by the user.
+
+## Problem Solving
+
+The problem is solved in two main steps:
+
+1. **Sorting the Array**: The array is sorted in ascending order to apply binary search. This is done using the `qsort` function provided by the C standard library.
+
+2. **Binary Search**: The binary search algorithm is applied on the sorted array. It works by repeatedly dividing the array into two halves that may contain the search target. The left half is selected if the target is less than the middle element, otherwise, the right half is selected.
+
+## Compilation Stages
+
+The GCC compiler compiles the program in four stages: preprocessing, compilation, assembly, and linking. Here's how to manually go through each stage:
+
+1. **Preprocessing**: This stage processes the `#include` and `#define` directives in the source code. Use the `-E` option to stop after this stage:
+
+    ```bash
+    gcc -E binary_search.c -o binary_search.i
+    ```
+
+    This will generate the preprocessed code `binary_search.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. Use the `-S` option to stop after this stage:
+
+    ```bash
+    gcc -S binary_search.i -o binary_search.s
+    ```
+
+    This will generate the assembly code `binary_search.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code. Use the `-c` option to stop after this stage:
+
+    ```bash
+    gcc -c binary_search.s -o binary_search.o
+    ```
+
+    This will generate the object file `binary_search.o`.
+
+4. **Linking**: This stage links the object code with the library code to generate the executable file:
+
+    ```bash
+    gcc binary_search.o -o binary_search
+    ```
+
+    This will generate the executable file `binary_search`.
+
+To run the program, use the following command:
+
+```bash
+./binary_search
+```
+
