@@ -300,6 +300,39 @@ This C program checks whether a given number is a magic number.
  Next, it computes the reverse of the sum of digits.
  If the product of the sum of digits and its reverse equals the original input number, it’s considered a magic number.
 
+ 
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+
+    gcc -E magic_number.c -o magic_number.i
+    This will generate the preprocessed code `character.i`
+
+    2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S magic_number.i -o magic_number.s
+    ```
+    This will generate the assembly code `magic_number.s`.
+   
+   3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c magic_number.s -o magic_number.o
+    ```
+    This will generate the object file `magic_number.o`.
+
+   4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc magic_number.o -o magic_number
+    ```
+    This will generate the executable file `magic_number`
+
 # Compilation and execution
 
 To compile and run this program:
@@ -316,6 +349,38 @@ This C program computes the power of a given base raised to a specified exponent
  The user provides the base and exponent.
  The power function recursively calculates the result by multiplying the base with the result of power(base, exponent - 1).
  If the exponent is zero, the function returns 1 (since any number raised to the power of 0 is 1).
+
+ ## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+
+    gcc -E power.c -o power.i
+    This will generate the preprocessed code `power.i`
+
+    2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+        ```bash
+    gcc -S power.i -o power.s
+    ```
+    This will generate the assembly code `power.s`.
+   
+   3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+
+    ```bash
+    gcc -c power.s -o power.o
+    ```
+    This will generate the object file `power.o`.
+
+   4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc power.o -o power
+    ```
+    This will generate the executable file `power`
 
 # Compilation and Execution
 To compile and run this program:
@@ -338,6 +403,36 @@ If the character is between ‘0’ and ‘9’, it’s considered a digit.
 Otherwise, it’s categorized as a special character.
 The program prints the type of the character.
 
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+
+    gcc -E character.c -o character.i
+    This will generate the preprocessed code `character.i`
+
+    2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S character.i -o charcter.s
+    ```
+    This will generate the assembly code `character.s`.
+   
+   3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+       ```bash
+    gcc -c character.s -o character.o
+    ```
+    This will generate the object file `character.o`.
+
+   4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc character.o -o character
+    ```
+    This will generate the executable file `character`
 # Compilation and Execution
 To compile and run this program:
 
@@ -361,6 +456,37 @@ Adds the monthly interest on the remaining balance.
 The process continues until the balance is paid off (monthlyUnpaidBalance becomes zero).
 The program prints the lowest payment needed to pay off the loan.
 
+## Compilation Process
+
+You can manually go through each of the four stages of the compilation process using `gcc`:
+
+1. **Preprocessing**: This stage includes expansion of macros and inclusion of header files. You can run the preprocessor with the `-E` option:
+
+    ```bash
+
+    gcc -E payment.c -o payment.i
+    This will generate the preprocessed code `payment.i`
+
+    2. **Compilation**: This stage translates the preprocessed code into assembly code. You can run the compiler with the `-S` option:
+
+    ```bash
+    gcc -S payment.i -o payment.s
+    ```
+   
+   This will generate the assembly code `payment.s`.
+   
+   3. **Assembly**: This stage translates the assembly code into machine code, generating an object file. You can run the assembler with the `-c` option:
+       ```bash
+    gcc -c payment.s -o payment.o
+    ```
+    This will generate the object file `payment.o`.
+
+   4. **Linking**: This stage links the object file with the libraries and generates the executable. You can run the linker by simply using `gcc` without any options:
+
+    ```bash
+    gcc payment.o -o payment
+    ```
+    This will generate the executable file `payment`
 # Compilation and Execution
 To compile and run this program:
 
