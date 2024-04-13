@@ -671,4 +671,56 @@ To run the program, use the following command:
 ./pyramid
 ```
 
+# Star
 
+This program prints a star pattern of a user-specified size.
+
+## Problem Solving
+
+The problem is solved in two main steps:
+
+1. **User Input**: The program asks the user to enter the size of the star pattern to print.
+
+2. **Printing the Star Pattern**: The program uses a combination of loops to print each line of the star pattern. The number of asterisks (`*`) printed on each line depends on the current line number and the total size of the pattern.
+
+## Compilation Stages
+
+The GCC compiler compiles the program in four stages: preprocessing, compilation, assembly, and linking. Here's how to manually go through each stage:
+
+1. **Preprocessing**: This stage processes the `#include` and `#define` directives in the source code. Use the `-E` option to stop after this stage:
+
+    ```bash
+    gcc -E star.c -o star.i
+    ```
+
+    This will generate the preprocessed code `star.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. Use the `-S` option to stop after this stage:
+
+    ```bash
+    gcc -S star.i -o star.s
+    ```
+
+    This will generate the assembly code `star.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code. Use the `-c` option to stop after this stage:
+
+    ```bash
+    gcc -c star.s -o star.o
+    ```
+
+    This will generate the object file `star.o`.
+
+4. **Linking**: This stage links the object code with the library code to generate the executable file:
+
+    ```bash
+    gcc star.o -o star
+    ```
+
+    This will generate the executable file `star`.
+
+To run the program, use the following command:
+
+```bash
+./star
+```
