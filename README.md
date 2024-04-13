@@ -617,4 +617,58 @@ To run the program, use the following command:
 ./time_table
 ```
 
+# Pyramid
+
+This program prints a pyramid pattern up to a user-specified number of lines.
+
+## Problem Solving
+
+The problem is solved in two main steps:
+
+1. **User Input**: The program asks the user to enter the number of lines of the pyramid to print.
+
+2. **Printing the Pyramid**: The program uses a combination of loops and a function to calculate and print each line of the pyramid.
+
+## Compilation Stages
+
+The GCC compiler compiles the program in four stages: preprocessing, compilation, assembly, and linking. Here's how to manually go through each stage:
+
+1. **Preprocessing**: This stage processes the `#include` and `#define` directives in the source code. Use the `-E` option to stop after this stage:
+
+    ```bash
+    gcc -E pyramid.c -o pyramid.i
+    ```
+
+    This will generate the preprocessed code `pyramid.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. Use the `-S` option to stop after this stage:
+
+    ```bash
+    gcc -S pyramid.i -o pyramid.s
+    ```
+
+    This will generate the assembly code `pyramid.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code. Use the `-c` option to stop after this stage:
+
+    ```bash
+    gcc -c pyramid.s -o pyramid.o
+    ```
+
+    This will generate the object file `pyramid.o`.
+
+4. **Linking**: This stage links the object code with the library code to generate the executable file:
+
+    ```bash
+    gcc pyramid.o -o pyramid
+    ```
+
+    This will generate the executable file `pyramid`.
+
+To run the program, use the following command:
+
+```bash
+./pyramid
+```
+
 
