@@ -558,3 +558,63 @@ To run the program, use the following command:
 ./binary_search
 ```
 
+
+
+
+
+
+# Multiplication Table in C
+
+This program performs a chosen operation (multiplication, addition, subtraction, or division) on an integer `n` and prints the result from `n op 1` to `n op 10`.
+
+## Problem Solving
+
+The problem is solved in two main steps:
+
+1. **User Input**: The program asks the user to enter an integer `n` and an operation (`*`, `+`, `-`, or `/`).
+
+2. **Operation and Print**: Depending on the operation chosen by the user, the program performs the operation on `n` and an integer `i` (which ranges from 1 to 10) and prints the result.
+
+## Compilation Stages
+
+The GCC compiler compiles the program in four stages: preprocessing, compilation, assembly, and linking. Here's how to manually go through each stage:
+
+1. **Preprocessing**: This stage processes the `#include` and `#define` directives in the source code. Use the `-E` option to stop after this stage:
+
+    ```bash
+    gcc -E time_table.c -o time_table.i
+    ```
+
+    This will generate the preprocessed code `time_table.i`.
+
+2. **Compilation**: This stage translates the preprocessed code into assembly code. Use the `-S` option to stop after this stage:
+
+    ```bash
+    gcc -S time_table.i -o time_table.s
+    ```
+
+    This will generate the assembly code `time_table.s`.
+
+3. **Assembly**: This stage translates the assembly code into machine code. Use the `-c` option to stop after this stage:
+
+    ```bash
+    gcc -c time_table.s -o time_table.o
+    ```
+
+    This will generate the object file `time_table.o`.
+
+4. **Linking**: This stage links the object code with the library code to generate the executable file:
+
+    ```bash
+    gcc time_table.o -o time_table
+    ```
+
+    This will generate the executable file `time_table`.
+
+To run the program, use the following command:
+
+```bash
+./time_table
+```
+
+
